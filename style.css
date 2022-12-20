@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-pressed: hsl(245, 65%, 62%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desat-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 0, 100%);
+  --red-hat: "Red Hat Display", sans-serif;
+}
+
+body {
+  font-family: var(--red-hat);
+  margin: 0;
+  background-color: var(--pale-blue);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 320px;
+  margin: 22px;
+  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.container-img {
+  height: 160px;
+  width: auto;
+  background-image: url("images/illustration-hero.svg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+p {
+  text-align: center;
+  color: var(--desat-blue);
+  letter-spacing: 0.5px;
+  line-height: 1.4rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.plan {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 80px;
+  border-radius: 10px;
+  background-color: var(--very-pale-blue);
+  margin: 15px;
+}
+
+.plan img {
+  place-items: center;
+  padding-top: 16px;
+  padding-left: 21px;
+  height: 50px;
+  width: 50px;
+}
+
+h2 {
+  padding-top: 5px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.plan-price p {
+  padding: 0;
+  text-align: inherit;
+  letter-spacing: 0;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.plan a {
+  padding-top: 30px;
+  padding-left: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.proceedbutton {
+  color: #fff;
+  background-color: var(--bright-blue);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 290px;
+  height: 55px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.proceedbutton:active {
+  transform: scale(0.98);
+  background-color: var(--bright-blue-pressed);
+}
+
+.cancelbutton {
+  background-color: white;
+  color: var(--desat-blue);
+  border: none;
+  height: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.cancelbutton:active {
+  color: black;
+}
+
+@media screen and (min-width: 770px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-size: no-repeat;
+    background-size: cover;
+    height: 800px;
+  }
+
+  .container {
+    height: 825px;
+    width: 500px;
+  }
+
+  .container-img {
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    padding-left: 60px;
+    padding-right: 60px;
+    line-height: 1.8rem;
+  }
+
+  .plan {
+    margin: 45px;
+    margin-top: 10px;
+    height: 110px;
+  }
+
+  .plan img {
+    height: 65px;
+    width: 65px;
+    padding-top: 25px;
+    padding-left: 36px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    padding-top: 15px;
+  }
+
+  .plan-price p {
+    font-size: 1.1rem;
+    margin-left: 0;
+  }
+
+  .plan a {
+    font-size: 1rem;
+    padding-top: 42px;
+  }
+
+  .proceedbutton {
+    width: auto;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 0;
+    height: 75px;
+    font-size: 1.1rem;
+  }
+
+  .cancelbutton {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+}
